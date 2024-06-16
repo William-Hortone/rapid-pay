@@ -1,6 +1,6 @@
 import React from 'react'
 import './home.css';
-import {Booking, Header} from './../../containers';
+import {SearchContainer, Header} from './../../containers';
 
 const Home = () => {
   return (
@@ -8,7 +8,7 @@ const Home = () => {
 
     <div className='app__home'>
       <Header />
-      <Booking />
+      <SearchContainer />
     </div>
     </>
   )

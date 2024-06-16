@@ -17,7 +17,7 @@
   backdrop-filter: blur(20px);
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  transition: top 0.3s ease, position 0.3s ease; /* Add transition for smoothness */
+  transition: all 0.3s ease;
 }
 .app__nav-link {
   text-transform: capitalize;
