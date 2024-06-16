@@ -3,7 +3,11 @@ import './booking.css';
 
 const Booking = () => {
   return (
-    <div>Booking</div>
+   <>
+    <section className="app__booking">
+
+    </section>
+   </>
   )
 }
 
