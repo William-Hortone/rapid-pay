@@ -10,3 +10,34 @@
   
 
 }
+.app__searchC-container{
+  position: relative;
+}
+.wrapper-options{
+  width: 40%;
+  height: 80px;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: #efefef;
+  border-radius: 50px;
+  overflow: hidden;
+
+}
+.option{
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  /* border-radius: 50px; */
+}
+.active-option{
+  border-radius: 50px;
+  color: var(--color-lithWhite);
+  background-color: var(--color-secondary);
+  font-family: var(--font-alt);
+}

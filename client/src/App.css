@@ -24,6 +24,13 @@ li {
 	justify-content: center;
 	align-items: center;
 }
+.numberOfRoom{
+	display: flex;
+	flex-direction: column;
+	align-items: center !important;
+	justify-content: center;
+	/* background-color: blue; */
+}
 .btn-primary {
 	background-color: var(--color-secondary);
 	color: var(--color-lithWhite);
