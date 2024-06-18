@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./searchContainer.css";
-import { SearchMenuHotel } from "../../components";
+import { SearchMenuHotel, SearchMenuTransport } from "../../components";
 
 const SearchContainer = () => {
+  const [activeOption, setActiveOption] =useState(true)
+
+
+  const handleClick = (status) => {
+    setActiveOption(status)
+  }
   return (
     <>
       <section className="app__searchContainer">
         <div className="app__searchC-container">
-          <SearchMenuHotel />
+        {activeOption &&  <SearchMenuHotel />}
+        {!activeOption &&  <SearchMenuTransport />}
+
+            
 
           <div className="wrapper-options">
-            <button className="option active-option">Hotels</button>
-            <button className="option">Transports</button>
+            <button onClick={() => handleClick(true)} className={activeOption? "option active-option":"option"}>Hotels</button>
+            <button onClick={() => handleClick(false)} className={!activeOption? "option active-option":"option"}>Transports</button>
           </div>
         </div>
       </section>

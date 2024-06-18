@@ -1,30 +1,34 @@
 
 .app__searchMenuContainer{
-    width:80vw;
+    width:70vw;
     height: 300px;
     display: flex;
     align-items: center;
-    /* flex-direction: column;
-    justify-content: space-between; */
     background-color: var(--color-primary);
-    border-radius: 20px;
-    padding: 2rem 1rem;
-    background-color: red;
+    border-radius: 20px !important;
+    padding: 2rem;
+    overflow: hidden;
+    /* background-color: red; */
   }
 .searchMenu-Wrapper{
     width: 100%;
     height: 300px;
     display: flex;
-    align-items: center;
-    /* flex-direction: column;
-    justify-content: space-between; */
-    /* background-color: var(--color-primary); */
-    border-radius: 20px;
-    /* padding: 2rem 1rem; */
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+   
   }
-  .searchMenu-Wrapper form{
-    width: 80%;
-    height: 300px;
+.searchMenu-Wrapper-header{
+    display: flex;
+    justify-content: space-between;
+}
+.searchMenu-Wrapper-header h2{
+  font-family: var(--font-alt);
+}
+.searchMenu-Wrapper form{
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;

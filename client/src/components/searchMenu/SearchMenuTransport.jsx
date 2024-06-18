@@ -1,22 +1,27 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
+
 import TextField from "@mui/material/TextField";
 import BtnPrimary from "../button/BtnPrimary";
 import "./searchMenu.css";
-import { MdOutlineBedroomParent } from "react-icons/md";
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-const SearchMenuHotel = () => {
+
+const SearchMenuTransport = () => {
+  const [value, setValue] = React.useState();
   return (
     <>
       <div className="app__searchMenuContainer">
         <div className="searchMenu-Wrapper">
           <div className="searchMenu-Wrapper-header">
-            <h2>Chercher les chambres disponibles</h2>
+            <h2>Chercher les bus disponibles</h2>
 
             <div>
-              <label htmlFor="">Par Hotels</label>
+              <label htmlFor="">Par Agences</label>
               <select name="" id="">
-                <option value="">Benedictat Hotel</option>
+                <option value="">Major Transport</option>
                 <option value="">Benedictat Hotel</option>
                 <option value="">Benedictat Hotel</option>
                 <option value="">Benedictat Hotel</option>
@@ -26,27 +31,33 @@ const SearchMenuHotel = () => {
 
           <form action="">
             <div className="searchMenu-Content">
-              <h4>Date d’entree</h4>
+              <h4>Ville de depart</h4>
               <TextField
                 id="standard-basic"
-                placeholder="Date d'entree"
+                placeholder="Ville de depart"
                 variant="standard"
               />
             </div>
             <div className="searchMenu-Content numberOfRoom">
-              <h6>Nombre de nuits : 2</h6>
-              <MdOutlineBedroomParent size={24} color="black" />
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DemoContainer components={["DatePicker"]}>
+                  <DatePicker 
+                  value={value}
+                  onChange={(newValue) => setValue(newValue)}
+                   label="Choisir une date" />
+                </DemoContainer>
+              </LocalizationProvider>
             </div>
 
             <div className="searchMenu-Content">
-              <h4>Date d’entree</h4>
+              <h4>Destination</h4>
               <TextField
                 id="standard-basic"
-                placeholder="Date d'entree"
+                placeholder="Votre Destination"
                 variant="standard"
               />
             </div>
-            <BtnPrimary title="Chercher" type='submit' />
+            <BtnPrimary title="Chercher" />
           </form>
         </div>
       </div>
@@ -54,4 +65,4 @@ const SearchMenuHotel = () => {
   );
 };
 
-export default SearchMenuHotel;
+export default SearchMenuTransport;
