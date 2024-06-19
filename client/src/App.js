@@ -30,6 +30,34 @@ const App = () => {
         toggleActions: 'play none none reverse',
       }
     });
+
+     // Pin the description section
+    //  gsap.to('.app__description', {
+    //   position:'fixed',
+    //   top: 0,
+    //   left: 0,
+    //   scrollTrigger: {
+    //     trigger: '.app__description',
+    //     start: 'top top',
+    //     end: 'bottom bottom',
+    //     pin: true,
+    //     scrub: true,
+    //     markers: true, // Enable markers for debugging
+    //   }
+    // });
+
+    // Scroll Footer on top of Description
+    // gsap.to('.app__footer', {
+    //   scrollTrigger: {
+    //     trigger: '.app__description',
+    //     start: 'bottom bottom', // Start when the bottom of Description reaches the bottom of the viewport
+    //     end: 'bottom top', // End when the top of the Footer reaches the top of the viewport
+    //     // toggleActions: 'play none none reverse',
+    //     // Optional: To ensure smooth transitions
+    //     scrub: true,
+    //     markers: true,
+    //   }
+    // });
   }, []);
 
 

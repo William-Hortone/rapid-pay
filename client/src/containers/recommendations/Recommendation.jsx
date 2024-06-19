@@ -3,7 +3,11 @@ import './Recommendations.css';
 
 const Recommendation = () => {
   return (
-    <div>Recommendation</div>
+  <>
+    <div className="app__recommendation">
+      <p></p>
+    </div>
+  </>
   )
 }
 

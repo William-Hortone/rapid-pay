@@ -1,0 +1,8 @@
+.app__home {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
